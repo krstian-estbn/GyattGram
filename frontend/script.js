@@ -31,7 +31,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
     formData.append('image', imageInput.files[0]);
     formData.append('caption', captionInput.value);
 
-    const response = await fetch('http://localhost:10000/uploads', {
+    const response = await fetch('https://gyattgram.onrender.com/uploads', {
         method: 'POST',
         body: formData,
     });
@@ -48,7 +48,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
 
 // Load images and captions
 async function loadImages() {
-    const response = await fetch('http://localhost:10000/images');
+    const response = await fetch('https://gyattgram.onrender.com/uploads');
     const data = await response.json();
 
     const gallery = document.getElementById('gallery');
