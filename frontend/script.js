@@ -31,7 +31,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
     formData.append('image', imageInput.files[0]);
     formData.append('caption', captionInput.value);
 
-    const response = await fetch('http://localhost:10000/upload', {
+    const response = await fetch('http://localhost:10000/uploads', {
         method: 'POST',
         body: formData,
     });
