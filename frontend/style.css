@@ -1,0 +1,178 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Choose a catchy and modern font */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.png'); /* Replace with the path to your desired background image */
+    background-repeat: repeat; /* Ensures the background image repeats as you scroll */
+    background-size: cover; /* Makes sure the image covers the entire page */
+    color: #333;
+}
+
+/* Header styling */
+h1 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #262626;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow behind the text */
+}
+
+/* Styling for 'Gyatt' and 'Gram' separately */
+h1 span.gyatt {
+    color: #F4D03F; /* Yellowish color for 'Gyatt' */
+}
+
+h1 span.gram {
+    color: #262626; /* Dark color for 'Gram' */
+}
+
+/* Styling for the icon beside the text */
+h1 img {
+    width: 60px; /* Adjust size of the icon */
+    height: 60px;
+    object-fit: cover;
+    margin-left: 10px; /* Adds space between the icon and the text */
+}
+
+/* Form styling */
+form {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Lifted effect */
+    box-sizing: border-box;
+}
+
+/* General input button styles */
+form input[type="file"],
+form input[type="text"],
+form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+/* Caption input styling */
+form input[type="text"] {
+    height: 50px;
+    resize: vertical;
+    background-color: #e4e3e3; /* Mango yellow shade */
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button styling */
+form button {
+    background-color: #F4D03F;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lifted effect */
+}
+
+form button:hover {
+    background-color: #e3be2c;
+}
+
+/* Gallery styling */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual image cards */
+.image-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Lifted effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Lifted effect */
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Caption text under images */
+.image-card p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#modalCaption {
+    margin: 15px auto;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

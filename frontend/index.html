@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GyattGram</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- GyattGram Header with Icon -->
+    <h1>
+        <span class="gyatt">Gyatt</span><span class="gram">Gram</span>
+        <img src="icon.png" alt="Icon"> <!-- Replace with your actual image path -->
+    </h1>
+
+    <form id="uploadForm">
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <input type="file" id="imageInput" accept="image/*" required style="display: none;">
+            <p id="fileInfo" style="font-size: 0.8rem; color: #555;">No file selected</p> <!-- Added for file name display -->
+            <button type="button" id="uploadTrigger">Snap a Gyatt</button>
+        </div>
+        <input type="text" id="captionInput" placeholder="What are you thinking..." required><br>
+        <button type="submit">Upload the Gyatt</button>
+    </form>
+
+    <div id="gallery"></div>
+
+    <!-- Image Viewer Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
